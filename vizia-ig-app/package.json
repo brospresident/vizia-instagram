@@ -1,0 +1,45 @@
+{
+    "name": "@socialinsider/bundle-si-key-metric",
+    "version": "1.0.0",
+    "description": "si – [DESCRIPTION]",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "npx @vizia/app-emulator -u",
+        "lint": "eslint .",
+        "test": "ava --verbose --color",
+        "ci": "npm run lint && npm run test",
+        "build": "npx @vizia/bob -t full"
+    },
+    "ava": {
+        "files": [
+            "test/src/**/*.test.js"
+        ]
+    },
+    "publishConfig": {
+        "registry": "https://registry.brandwatch.npme.io"
+    },
+    "repository": "github:socialinsider/si-key-metric",
+    "homepage": "https://github.com/socialinsider/si-key-metric#readme",
+    "bugs": {
+        "url": "https://github.com/socialinsider/si-key-metric/issues"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@vizia/bundle": "^2",
+        "@vizia/destination-key-metric": "^1.1.18",
+        "axios": "^0.18.0",
+        "fs": "0.0.1-security"
+    },
+    "devDependencies": {
+        "@vizia/eslint-config": "^2",
+        "ava": "^0",
+        "eslint": "^5"
+    },
+    "vizia": {
+        "browser": "src/index.js",
+        "bundle": "src/lib/create-bundle.js",
+        "manifests": {
+            "si-key-metric": "public/manifest.json"
+        }
+    }
+}

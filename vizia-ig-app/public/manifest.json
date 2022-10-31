@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "describedBy": "http://vizia.brandwatch.com/manifest/v3",
+    "displayName": "si",
+    "description": "[DESCRIPTION]",
+    "browserScripts": [
+        "../vizia-numeral/vizia-numeral.min.js",
+        "../vizia-moment/vizia-moment.min.js"
+    ],
+    "options": {
+        "required": [
+            "profile",
+            "yValue"
+        ],
+        "properties": {
+            "profile": {
+                "title": "Profile to track",
+                "help": "Profile id to track",
+                "default": "BMW",
+                "type": "string"
+            },
+            "project": {
+                "title": "Project with the profile",
+                "type": "string",
+                "default": "Auto"
+            },
+            "yValue": {
+                "title": "Metric",
+                "enum": [
+                    "followers_today",
+                    "followers",
+                    "followers_growth",
+                    "followers_growth_percent",
+                    "engagement_rate_per_post",
+                    "engagement_rate_per_profile",
+                    "engagement",
+                    "likes",
+                    "comments",
+                    "posts",
+                    "average_engagement_per_day",
+                    "average_engagement_per_post",
+                    "average_likes_per_post",
+                    "average_comments_per_post",
+                    "average_posts_per_day",
+                    "average_hashtags_per_post",
+                    "total_reach",
+                    "posts_reach_penetration",
+                    "total_impressions",
+                    "average_reach_per_post",
+                    "average_impressions_per_post",
+                    "video_views",
+                    "stories",
+                    "stories_days_with_stories",
+                    "stories_per_day",
+                    "stories_avg_peak_reach",
+                    "stories_max_peak_reach",
+                    "stories_peak_reach_rate",
+                    "stories_avg_retention_rate",
+                    "stories_impressions",
+                    "stories_replies",
+                    "stories_reach",
+                    "stories_reach_penetration",
+                    "average_hashtags_per_story",
+                    "profile_reach",
+                    "profile_reach_penetration",
+                    "profile_impressions",
+                    "profile_views",
+                    "profile_email_contacts",
+                    "profile_text_message_clicks",
+                    "profile_get_directions_clicks",
+                    "profile_phone_call_clicks",
+                    "profile_website_clicks"
+                ],
+                "labels": ["Followers Today", "Followers", "Followers Growth", "Followers Growth Percent", "Engagement Rate Per Post", "Engagement Rate Per Profile", "Engagement", "Likes", "Comments", "Posts", "Average Engagement Per Day", "Average Engagement Per Post", "Average Likes Per Post", "Average Comments Per Post", "Average Posts Per Day", "Average Hashtags Per Post", "Total Reach", "Posts Reach Penetration", "Total Impressions", "Average Reach Per Post", "Average Impressions Per Post", "Video Views", "Stories", "Stories Days With Stories", "Stories Per Day", "Stories Avg Peak Reach", "Stories Max Peak Reach", "Stories Peak Reach Rate", "Stories Avg Retention Rate", "Stories Impressions", "Stories Replies", "Stories Reach", "Stories Reach Penetration", "Average Hashtags Per Story", "Profile Reach", "Profile Reach Penetration", "Profile Impressions", "Profile Views", "Profile Email Contacts", "Profile Text Message Clicks", "Profile Get Directions Clicks", "Profile Phone Call Clicks", "Profile Website Clicks"],
+                "type": "string"
+            },
+            "key": {
+                "type": "string",
+                "title": "Vizia Key",
+                "default": "ANDREI_KEY"
+            }
+        }
+    },
+    "legacyId": "si-key-metric",
+    "groupId": "custom",
+    "artifactRoot": "bundle-si-key-metric",
+    "artifacts": {
+        "full": "bundle-si-key-metric/build/bundle.min.js"
+    },
+    "visualization": "key-stat",
+    "platform": [
+        "@vizia/destination-key-metric"
+    ],
+    "thumbnail_url": "total_mentions.svg"
+}
